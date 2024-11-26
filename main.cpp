@@ -41,3 +41,23 @@ int main() {
 
     return 0;
 }
+
+void createUser(){
+    User newUser;
+    cout<<"Enter User ID: ";
+    cin >> newUser.id;
+    cout<<"Enter User Name: ";
+    cin.ignore();
+    getline(cin, newUser.name);
+    users.push_back(newUser);
+    cout<<"User created successfully!\n";          
+}
+ 
+void readUsers(){
+}
+ 
+void updateUser(){
+}
+ 
+void deleteUser(){
+}
