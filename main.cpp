@@ -53,8 +53,18 @@ void createUser(){
     cout<<"User created successfully!\n";          
 }
  
-void readUsers(){
+void readUsers() {
+    if (users.empty()) {
+        cout << "No users available.\n";
+        return;
+    }
+
+    cout << "List of Users:\n";
+    for (const auto& user : users) {
+        cout << "ID: " << user.id << ", Name: " << user.name << "\n";
+    }
 }
+
  
 void updateUser(){
 }
