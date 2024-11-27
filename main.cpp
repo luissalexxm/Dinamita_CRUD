@@ -67,7 +67,27 @@ void readUsers() {
 
  
 void updateUser(){
+	int userId;
+    cout << "Enter the ID of the user you want to update: ";
+    cin >> userId;
+
+    
+    bool found = false;
+    for (auto& user : users) {
+        if (user.id == userId) {
+            found = true;
+            cout << "User found! Current name: " << user.name << "\n";
+            cout << "Enter new name for the user: ";
+            cin.ignore();
+            getline(cin, user.name);
+            cout << "User updated successfully!\n";
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "User with ID " << userId << " not found.\n";
+    }
 }
- 
 void deleteUser(){
 }
